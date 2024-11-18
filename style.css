@@ -41,6 +41,12 @@ span{
     color: royalblue;
 }
 
+@media screen and (min-width: 768px) {
+    .navbar {
+        transform: translateX(93px);
+    }
+}
+
 .navbar a{
     font-size: 18px;
     color: white;
@@ -48,8 +54,11 @@ span{
     margin: 0 27px;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease;
+    
 
 }
+
+
 
 .navbar a:hover,
 .navbar a.active{
@@ -76,7 +85,7 @@ html{
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s ease;
-    transform: translateX(100px); /* Adjust the value as needed */
+    transform: translateX(177px); /* Adjust the value as needed */
 }
 
 .contact:hover{
