@@ -13,6 +13,10 @@
     <header class="header">
         <a href="#" class="logo"><span>Kimic
         </span></a>
+
+    
+
+
         <nav class="navbar">
             <a href="#exp">Experience</a>
             <a href="KIMI-IOT-PROJECT.pdf" download target="_blank">Project</a>
@@ -20,7 +24,9 @@
     
         </nav>
 
+    
         <a href="#contact-me" class="contact">Contact Me</a>
+        <i class='bx bx-menu menu-icon'></i>
     </header>
 
     <section class="home">
@@ -118,7 +124,7 @@
                 <a href="#">Services</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#contact-me">Contact</a>
             </li>
             <li>
                 <a href="#">Privacy Policy</a>
@@ -127,5 +133,22 @@
 
         <p class="copyright"></p>© 2024 Kimi | All Rights Reserved
     </footer>
+
+    
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+      
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>

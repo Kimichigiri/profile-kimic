@@ -71,11 +71,12 @@ html{
     background-color: white;
     color: black;
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 30px;
     font-size: 16px;
     letter-spacing: 1px;
     font-weight: 600;
     transition: 0.3s ease;
+    transform: translateX(100px); /* Adjust the value as needed */
 }
 
 .contact:hover{
@@ -144,18 +145,6 @@ html{
     border: 2px solid black;
 }
 
-.button-2{
-    padding: 15px 28px;
-    background-color: royalblue;
-    color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 600;
-    transition: 0.3 ease;
-    cursor: pointer;
-}
 
 .button-2:hover{
     background-color: white;
@@ -216,6 +205,24 @@ html{
     margin-left: 5px;
  
 }
+
+.button-2{
+    padding: 15px 28px;
+    background-color: royalblue;
+    color: white;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;   
+    transform: translateY(20px);
+    transition: 0.3 ease;
+    cursor: pointer;
+    position: relative;
+    top: 25px;
+    
+}
+
 
 .contact-form h2{
     text-align: center;
@@ -310,6 +317,8 @@ html{
     color: white;
 }
 
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .header {
@@ -323,6 +332,7 @@ html{
     .navbar {
         flex-direction: column;
         margin-top: 10px;
+
     }
 
     .navbar a {
@@ -397,34 +407,145 @@ html{
     }
 }
 
-/* Smaller devices (mobile portrait) */
-@media (max-width: 480px) {
+/* Add this to your existing CSS */
+
+/* Hamburger menu icon */
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 0px;
+
+}
+
+/* Update your media queries */
+@media (max-width: 768px) {
     .header {
-        padding: 15px 2%;
+        padding: 20px 5%;
+       
     }
 
-    .logo {
-        font-size: 18px;
+    .menu-icon {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.9);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
     }
 
     .navbar a {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
         font-size: 16px;
     }
 
+    .contact {
+        display: none; /* Hide contact button in mobile view */
+    }
+
+    /* Home section adjustments */
+    .home {
+        padding: 100px 5% 20px;
+        gap: 3em;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+        text-align: center;
+    }
+
     .home-content h1 {
-        font-size: 35px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        text-align: center;
+        margin: 15px 0;
     }
 
     .button-box {
         width: 100%;
         flex-direction: column;
-        gap: 10px;
         align-items: center;
     }
 
-    .button-1,
-    .button-2 {
+    .img-box img {
+        width: 250px;
+        margin-top: 20px;
+    }
+
+    /* About section adjustments */
+    .about {
+        padding: 60px 5%;
+        gap: 3em;
+    }
+
+    .about-img img {
+        width: 250px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        margin: 1em 0;
+    }
+
+    /* Contact form adjustments */
+    .contact-form form {
+        padding: 0 20px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    .input-box input {
         width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Footer adjustments */
+    .kaki ul li {
+        padding: 0 10px;
+        margin: 5px 0;
+    }
+
+    .kaki .social a {
+        margin: 0 5px;
+    }
+}
+
+/* Add a smaller breakpoint for very small devices */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
     }
 
     .img-box img {
@@ -433,25 +554,5 @@ html{
 
     .about-img img {
         width: 200px;
-    }
-
-    .about-content h2, .about-content h3 {
-        font-size: 24px;
-    }
-
-    .about-content p {
-        font-size: 14px;
-    }
-
-    .kaki {
-        padding: 20px 0;
-    }
-
-    .kaki .social a {
-        font-size: 18px;
-    }
-
-    .kaki ul li {
-        padding: 0 10px;
     }
 }
